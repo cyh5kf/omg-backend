@@ -1,0 +1,52 @@
+.call-history-view {
+  .call-history-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    > span,
+    > i,
+    > div {
+      width: 20%;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .call-dir-icon {
+      pointer-events: none;
+      &.call-out {
+        transform: scale(2) rotate(135deg);
+      }
+      &.call-in {
+        transform: scale(2) rotate(-45deg);
+      }
+    }
+
+    .call-timestamp {
+      width: 120px;
+    }
+
+    .user-item {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      cursor: pointer;
+      .user-avatar {
+        flex-shrink: 0;
+        margin: 0 10px;
+      }
+    }
+
+    .audio-player,
+    .audio-player-placeholder {
+      margin-left: 8%;
+      width: 22%;
+    }
+    .audio-player {
+      margin-top: -7px;
+      transform: translate(0, 3px);
+    }
+  }
+}

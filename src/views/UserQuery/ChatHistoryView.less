@@ -1,0 +1,212 @@
+@import '../_mixins';
+
+.chat-history-view {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  &.no-data {
+    height: 58px;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+  }
+
+  .chat-user-list {
+    flex-shrink: 0;
+    width: 330px;
+    height: 500px;
+    overflow: auto;
+    border: 1px solid #d9d9d9;
+    border-right: none;
+
+    .session-item {
+      display: flex;
+      align-items: center;
+      height: 68px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #888;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+      &.selected {
+        background-color: #e9ebeb;
+      }
+      .session-info {
+        line-height: 1;
+        .session-name {
+          font-size: 16px;
+          padding-bottom: 5px;
+          color: #333;
+        }
+      }
+      .user-avatar {
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+
+.chat-message-list {
+  flex-grow: 1;
+  height: 500px;
+  overflow: auto;
+  border: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+  background-color: #efeeee;
+
+  .message-item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 .5px 1px hsla(106,6%,59%,.5);
+    font-size: 14px;
+    + .message-item {
+      margin-top: 4px;
+    }
+    .msg-time-status {
+      position: absolute;
+      right: 11px;
+      bottom: 4px;
+      white-space: nowrap;
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba(0,0,0,.38);  
+    }
+
+    &.text-msg {
+      padding: 6px 11px;
+      max-width: 80%;
+      word-break: break-all;
+      .msg-time-status.time-placeholder {
+        position: static;
+        padding-left: 15px;
+        visibility: hidden;
+      }
+    }
+    &.video-msg {
+      padding: 3px;
+      video {
+        background: #000;
+        vertical-align: top;
+        width: 300px;
+        min-height: 100px;
+        max-height: 300px;
+      }
+    }
+    &.img-msg {
+      line-height: 0;
+      padding: 3px;
+      img {
+        min-height: 100px;
+        max-height: 300px;
+        min-width: 100px;
+        max-width: 300px;
+        vertical-align: top;
+      }
+      .msg-time-status {
+        background-color: #4c4c4c;
+        color: #fff;
+        bottom: 8px;
+        border-radius: 2px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .system-msg {
+    clear: both;
+    text-align: center;
+    padding-top: 20px;
+    + .system-msg {
+      padding-top: 7px;
+    }
+    .system-msg-text {
+      display: inline-block;
+      background-color: rgba(0,0,0,.12);
+      color: #fff;
+      border-radius: 2px;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+
+  .msg-timeline-wrapper {
+    text-align: center;
+    padding-top: 20px;
+    clear: both;
+    .msg-timeline-label {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 2px;
+      background-color: rgba(0,0,0,.12);
+      color: #fff;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .user-msgs-container {
+    position: relative;
+    clear: both;
+    padding-left: 50px;
+    margin-top: 20px;
+    width: 100%;
+
+    .user-msg-list {
+      .clear-float();
+    }
+
+    .msg-sender-name {
+      line-height: 17px;
+      font-size: 14px;
+      color: rgba(0,0,0,.38);
+      margin: 0 0 3px 11px;
+    }
+
+    .msg-sender-logo {
+      width: 33px;
+      height: 33px;
+      line-height: 33px;
+    }
+
+    .message-item {
+      float: left;
+      clear: both;
+    }
+
+    .user-avatar {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+    }
+
+    &.own-msgs {
+      float: right;
+      padding-left: 0;
+      padding-right: 50px;
+
+      .message-item {
+        float: right;
+        background-color: #eeffe3;
+      }
+
+      .msg-sender-name {
+        text-align: right;
+        margin-left: auto;
+        margin-right: 11px;
+      }
+
+      .msg-sender-logo {
+        left: auto;
+        right: 10px;
+      }
+    }
+  }
+}

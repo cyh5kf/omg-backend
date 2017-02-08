@@ -1,0 +1,82 @@
+/*
+* 对Ant Design 组件的样式定制
+*/
+
+@COLOR_GREEN:#1aad19;
+
+.ant-table{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.ant-table-tbody{
+  background-color: #ffffff;
+}
+
+.ant-pagination-options-size-changer {
+  margin-right: 0px;
+}
+
+.ant-btn {
+  font-weight: 300;
+}
+
+.ant-modal-content {
+  border-radius: 0px;
+}
+
+.ant-tooltip {
+  .ant-tooltip-content {
+    .ant-tooltip-inner {
+      background-color: #fff;
+      color: #666666;
+      font-size: 12px;
+      max-width: 300px;
+      padding: 20px 26px;
+    }
+  }
+  &.ant-tooltip-placement-bottom .ant-tooltip-arrow {
+    top: 1px;
+    border-width: 0 7px 7px;
+    border-bottom-color: #fff;
+  }
+}
+
+
+.ant-confirm-confirm{
+
+   &.confirm-dangerous{
+
+     .ant-modal-body{
+       padding: 20px 26px;
+     }
+
+     .ant-confirm-body .ant-confirm-content{
+       color: fade(#000000,78);
+       font-size: 16px;
+       margin-left: 0px;
+       line-height: 24px;
+     }
+
+     .anticon-question-circle{
+       display: none;
+     }
+
+     .ant-confirm-btns{
+       font-size: 14px;
+
+       .ant-btn-ghost{
+         width: 74px;
+         background-color: fade(#DEDEDE,20);
+         color: fade(#000000,38);
+       }
+
+       .ant-btn-primary{
+         width: 78px;
+         border-color:#E64340;
+         background-color: #E64340;
+       }
+
+     }
+
+
+   }
+}

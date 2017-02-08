@@ -1,0 +1,100 @@
+
+.ant-layout-siderbar {
+  width: 256px;
+  height:100%;
+  transition: all 0.3s;
+  overflow: hidden;
+  background-color: #EBEFF2;
+  font-size: 14px;
+  flex-shrink: 0;
+  .ant-menu {
+    background-color: #EBEFF2!important;
+    margin-top: 22px;
+    .ant-menu-item {
+      border-right: none;
+      height: 60px;
+      line-height: 60px;
+      .ic-common {
+
+        width: 24px;
+        height: 24px;
+        display: block;
+        float: left;
+        margin-top: 17px;
+      }
+      .menu-name {
+        display: block;
+        float: left;
+        margin-left: 32px;
+        color: #6E8087;
+        font-size: 14px;
+      }
+
+      .ic-home {
+        background: url("../../images/ic_home.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-watchlist {
+        background: url("../../images/ic_watchlist.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-userquery {
+        background: url("../../images/ic_userquery.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-closedcases {
+        background: url("../../images/ic_closedcases.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-systemlogs {
+        background: url("../../images/ic_systemlogs.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-teammanagement {
+        background: url("../../images/ic_teammanagement.png") no-repeat;
+        background-size: cover;
+      }
+
+    }
+    .ant-menu-item-active {
+      background-color: #DBE2E6;
+    }
+    .ant-menu-item-selected {
+      background-color: #1AAD19;
+      .menu-name {
+        color: #fff;
+      }
+      .ic-home {
+        background: url("../../images/ic_home_pressed.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-watchlist {
+        background: url("../../images/ic_watchlist_pressed.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-userquery {
+        background: url("../../images/ic_userquery_pressed.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-closedcases {
+        background: url("../../images/ic_closedcases_pressed.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-systemlogs {
+        background: url("../../images/ic_systemlogs_pressed.png") no-repeat;
+        background-size: cover;
+      }
+      .ic-teammanagement {
+        background: url("../../images/ic_teammanagement_pressed.png") no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  &.sidebar-fold-true{
+    width: 0px;
+
+  }
+
+
+
+}

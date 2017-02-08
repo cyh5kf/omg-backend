@@ -1,0 +1,80 @@
+
+@header_height:62px;
+@header_color:#FFF;
+
+.ant-layout-header {
+  overflow: hidden;
+  background-color: #36434D;
+  line-height: @header_height;
+  height: @header_height;
+  flex-shrink: 0;
+  .header-left{
+    margin-left: 27px;
+    .header-name {
+      width: 100%;
+      font-size: 18px;
+      color: @header_color;
+    }
+
+    .header-menu-fold{
+      cursor: pointer;
+      font-size: 16px;
+      width: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .header-right {
+    float: right;
+    font-size: 14px;
+    .link-userName{
+      display: block;
+      float:left;
+      cursor: pointer;
+      margin-right: 22px;
+      float:left;
+      .ic-person {
+        background: url("../../images/ic_person.png") no-repeat;
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+        display: block;
+        float: left;
+        margin-top: 18px;
+      }
+      .userName {
+        color: @header_color;
+        padding-left: 10px;
+        display: block;
+        float: left;
+        .anticon {
+          padding-right: 5px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .logout {
+      cursor: pointer;
+      color: #fff;
+      float:left;
+      margin-right: 25px;
+      .ic_logout {
+        background: url("../../images/ic_exit.png") no-repeat;
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+        display: block;
+        float: left;
+        margin-top: 18px;
+      }
+      .logout-text {
+        color: @header_color;
+        padding-left: 10px;
+        display: block;
+        float: left;
+      }
+    }
+  }
+}
